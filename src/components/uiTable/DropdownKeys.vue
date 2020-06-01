@@ -11,12 +11,7 @@
       <div
         :class="['dropdown__item', { 'dropdown__item-active': isAllChecked }]"
       >
-        <input
-          class="dropdown__checkbox"
-          type="checkbox"
-          :checked="isAllChecked"
-          @click="changeAll"
-        />
+        <custom-checkbox :checked="isAllChecked" @change="changeAll" />
         <div class="dropdown__text">
           Select All
         </div>
@@ -29,11 +24,9 @@
           { 'dropdown__item-active': isCheckedItem(key) },
         ]"
       >
-        <input
-          class="dropdown__checkbox"
-          type="checkbox"
+        <custom-checkbox
           :checked="isCheckedItem(key)"
-          @click="changeItem(key)"
+          @change="changeItem(key)"
         />
         <div class="dropdown__text">{{ title }}</div>
       </div>
@@ -43,6 +36,8 @@
 
 <script>
 import ClickOutside from 'vue-click-outside';
+
+import CustomCheckbox from './CustomCheckbox';
 
 export default {
   name: 'KeysDropdown',
@@ -62,6 +57,9 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  components: {
+    CustomCheckbox,
   },
   data: () => ({
     show: false,
