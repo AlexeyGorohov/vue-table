@@ -13,19 +13,23 @@
 
         <div class="settings__col">
           <div class="settings__filter settings__filter_button">
-            <button
-              type="submit"
-              :class="[
-                'button',
-                {
-                  button_disabled: loading || this.checkedRowsId.length < 1,
-                },
-              ]"
-              :disabled="loading || this.checkedRowsId.length < 1"
-              @click="$emit('delete-items', checkedRowsId)"
-            >
-              {{ btnDeleteTitle }}
-            </button>
+            <popover @ok="$emit('delete-items', checkedRowsId)">
+              <button
+                type="submit"
+                :class="[
+                  'button',
+                  {
+                    button_disabled: loading || checkedRowsId.length < 1,
+                  },
+                ]"
+                :disabled="loading || checkedRowsId.length < 1"
+              >
+                {{ btnDeleteTitle }}
+              </button>
+              <template #content>
+                Are you sure you want to <b>delete {{ checkedRowsId.length > 1 ? 'items' : 'item' }} ?</b>
+              </template>
+            </popover>
           </div>
 
           <div class="settings__filter settings__filter_per-page">
@@ -90,6 +94,7 @@
 <script>
 import orderBy from 'lodash.orderby';
 
+import Popover from './Popover';
 import SortColumn from './SortColumn';
 import Pagination from './Pagination';
 import DropdownKeys from './DropdownKeys';
@@ -133,6 +138,7 @@ export default {
     sortColumn: null,
   }),
   components: {
+    Popover,
     SortColumn,
     TableThead,
     Pagination,

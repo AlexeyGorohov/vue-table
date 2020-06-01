@@ -6,7 +6,7 @@
 
     <div v-if="isShow" class="popover__content">
       <div class="popover__container">
-        Are you sure you want to <b>delete item ?</b>
+        <slot name="content"/>
       </div>
       <div class="popover__buttons">
         <div class="popover__button-item">

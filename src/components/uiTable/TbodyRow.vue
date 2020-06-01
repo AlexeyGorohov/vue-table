@@ -22,9 +22,12 @@
         />
       </div>
       <div v-else-if="key === DELETED">
-        <popover-deleted-item v-if="isHover" @ok="$emit('deleted-item')">
+        <popover v-if="isHover" @ok="$emit('deleted-item')">
           <delete-icon /><span class="mx-d-inline-block mx-ml-5">Delete</span>
-        </popover-deleted-item>
+          <template #content>
+            Are you sure you want to <b>delete item ?</b>
+          </template>
+        </popover>
       </div>
       <div v-else>
         {{ item[key] }}
@@ -36,7 +39,7 @@
 <script>
 import { DELETED, CHECKED } from './_constants';
 
-import PopoverDeletedItem from './PopoverDeletedItem';
+import Popover from './Popover';
 import CustomCheckbox from './CustomCheckbox';
 
 import DeleteIcon from '../../assets/svg/delete.svg';
@@ -59,8 +62,8 @@ export default {
     isHover: false,
   }),
   components: {
+    Popover,
     DeleteIcon,
-    PopoverDeletedItem,
     CustomCheckbox,
   },
 };
