@@ -27,10 +27,10 @@
   }
 
   &__text {
-    font-family: Source Sans Pro;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+    color: #282136;
     line-height: 24px;
     padding-left: 13px;
   }
@@ -69,6 +69,7 @@
     padding-left: 14px;
     overflow: hidden;
     border-radius: 2px;
+    color: #5b5e77;
     border: 1px solid #d5dae0;
   }
 }
