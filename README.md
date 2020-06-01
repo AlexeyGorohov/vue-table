@@ -1,5 +1,3 @@
-# test-ida-project
-
 ## Project setup
 ```
 npm install
