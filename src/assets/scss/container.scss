@@ -1,0 +1,21 @@
+.container {
+  font-family: Source Sans Pro;
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+  margin: 32px auto 0;
+
+  &__heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    padding-bottom: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ededed;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}

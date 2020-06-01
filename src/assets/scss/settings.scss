@@ -1,0 +1,22 @@
+.settings {
+  box-sizing: border-box;
+  font-family: Source Sans Pro;
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-style: normal;
+  }
+
+  &__col {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__filter {
+    padding-left: 15px;
+  }
+}

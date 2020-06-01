@@ -1,0 +1,30 @@
+.custom-checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  border: 1px solid #c6cbd4;
+  position: relative;
+  display: block;
+  border-radius: 1px;
+  width: 14px;
+  height: 14px;
+  user-select: none;
+  transition: 0.3s ease;
+  background: #fff;
+
+  &_checked {
+    background: #00a11e;
+    border: 1px solid transparent;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      width: 3px;
+      height: 7px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.mx {
+  &-vertical-center {
+    display: flex;
+    align-items: center;
+  }
+
+  &-cursor-pointer {
+    cursor: pointer;
+  }
+
+  &-d-inline-block {
+    display: inline-block;
+  }
+
+  &-ml {
+    &-5 {
+      margin-left: 5px;
+    }
+  }
+}

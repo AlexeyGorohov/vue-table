@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,200;1,300&display=swap');
+@import '~reset-css/sass/_reset.scss';
+@import '~normalize.css/normalize.css';
+
+@import 
+  'mixin.scss', 
+  'mx.scss', 
+  'custom-checkbox.scss', 
+  'container.scss', 
+  'table.scss',
+  'dropdown.scss',
+  'button.scss',
+  'pagination.scss',
+  'popover.scss', 
+  'sort.scss',
+  'settings.scss';

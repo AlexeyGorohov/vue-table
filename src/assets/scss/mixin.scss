@@ -1,0 +1,9 @@
+@mixin transition-loading {
+  transition: .3s ease;
+  opacity: 1;
+
+  &_loading {
+    opacity: .7;
+    pointer-events: none;
+  }
+} 
