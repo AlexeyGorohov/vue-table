@@ -16,6 +16,7 @@
     line-height: 24px;
     display: flex;
     align-items: center;
+    color: #282136;
 
     &:not(:last-of-type) {
       margin-bottom: 12px;
@@ -30,7 +31,6 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    color: #282136;
     line-height: 24px;
     padding-left: 13px;
   }
