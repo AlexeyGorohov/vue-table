@@ -11,7 +11,7 @@
     "core-js": "^3.6.5",
     "lodash.orderby": "^4.6.0",
     "lodash.sortby": "^4.7.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "reset-css": "^5.0.1",
     "sass-loader": "^8.0.2",
